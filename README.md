@@ -9,6 +9,7 @@ To run locally run the following:
 
 1. `bun install`
 2. `bun dev`
+
 **Its that [easy](https://youtu.be/GuEDsVoh8OA?si=PSKCM0wC1rRe72f9)!!**
 
 ## Other Stuff
