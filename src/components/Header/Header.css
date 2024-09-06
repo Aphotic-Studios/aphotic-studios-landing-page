@@ -1,0 +1,7 @@
+/* Custom styles for the mobile menu animation */
+.mobile-menu {
+  transition: transform 0.3s ease-in-out;
+}
+.mobile-menu.hidden {
+  transform: translateX(100%);
+}
