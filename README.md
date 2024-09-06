@@ -21,6 +21,6 @@ We may need to add a script that will install [bun](https://bun.sh/) on our serv
 
 ## Authors
 
-- [James](https://github.com/ANewModern){:target="_blank"}
-- [The Avatar](https://github.com/ornitorrincco){:target="_blank"}
+- [James](https://github.com/ANewModern)
+- [The Avatar](https://github.com/ornitorrincco)
   
