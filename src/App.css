@@ -1,0 +1,90 @@
+.app {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.euphotic-transition {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  text-align: center;
+}
+
+.zone-transition-text {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--current-accent);
+  font-weight: 300;
+  opacity: 0.8;
+  animation: transitionPulse 4s ease-in-out infinite;
+  text-shadow: 0 0 20px var(--current-accent);
+}
+
+@keyframes transitionPulse {
+  0%, 100% { 
+    opacity: 0.6; 
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.05);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--current-primary);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--current-accent);
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--current-secondary);
+}
+
+/* Ensure full viewport usage */
+.app {
+  min-height: 100vh;
+}
+
+/* Zone buffer areas for seamless transitions */
+.zone-buffer {
+  height: 30vh;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zone-buffer--euphotic-to-disphotic {
+  background: linear-gradient(180deg, 
+    rgba(0, 105, 92, 0.12) 0%,
+    rgba(0, 131, 143, 0.08) 30%,
+    rgba(57, 73, 171, 0.08) 70%,
+    rgba(26, 35, 126, 0.12) 100%
+  );
+}
+
+.zone-buffer--disphotic-to-aphotic {
+  background: linear-gradient(180deg, 
+    rgba(26, 35, 126, 0.12) 0%,
+    rgba(21, 101, 192, 0.08) 30%,
+    rgba(13, 71, 161, 0.08) 70%,
+    rgba(13, 27, 42, 0.18) 100%
+  );
+}

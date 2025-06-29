@@ -7,14 +7,73 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Ocean Zone Theme Variables - ADA Compliant */
+  
+  /* Surface Zone - High contrast white text on dark backgrounds (consistent with other zones) */
+  --surface-primary: #0088AA;
+  --surface-secondary: #4A90A4;
+  --surface-accent: #FF6F00;
+  --surface-text: #FFFFFF;
+  --surface-bg: linear-gradient(180deg, #B3E5FC 0%, #4FC3F7 50%, #0088AA 100%);
+  
+  /* Euphotic Zone - High contrast light text on dark backgrounds */
+  --euphotic-primary: #006666;
+  --euphotic-secondary: #2E7D32;
+  --euphotic-accent: #FF6F00;
+  --euphotic-text: #FFFFFF;
+  --euphotic-bg: linear-gradient(180deg, #0088AA 0%, #26A69A 50%, #006666 100%);
+  
+  /* Disphotic Zone - High contrast light text on dark backgrounds */
+  --disphotic-primary: #1A237E;
+  --disphotic-secondary: #3F51B5;
+  --disphotic-accent: #FF8F00;
+  --disphotic-text: #FFFFFF;
+  --disphotic-bg: linear-gradient(180deg, #006666 0%, #3949AB 50%, #1A237E 100%);
+  
+  /* Aphotic Zone - High contrast light text on very dark backgrounds */
+  --aphotic-primary: #0D1B2A;
+  --aphotic-secondary: #1B263B;
+  --aphotic-accent: #00E5FF;
+  --aphotic-glow: #64FFDA;
+  --aphotic-text: #FFFFFF;
+  --aphotic-bg: linear-gradient(180deg, #1A237E 0%, #0D47A1 50%, #0D1B2A 100%);
+  
+  /* Enhanced ocean gradient with better zone distinction */
+  --ocean-gradient: linear-gradient(180deg, 
+    #B3E5FC 0%,           /* Surface start - bright */
+    #81D4FA 8%,           /* Surface bright */
+    #4FC3F7 16%,          /* Surface medium */
+    #29B6F6 24%,          /* Surface to euphotic */
+    #0288D1 25%,          /* Euphotic start - distinct blue */
+    #0277BD 30%,          /* Euphotic blue */
+    #26A69A 35%,          /* Euphotic teal */
+    #00695C 40%,          /* Euphotic deep teal */
+    #004D40 45%,          /* Euphotic to disphotic */
+    #006064 50%,          /* Disphotic start - darker teal */
+    #00838F 55%,          /* Disphotic blue-green */
+    #3949AB 60%,          /* Disphotic purple-blue */
+    #303F9F 65%,          /* Disphotic indigo */
+    #1A237E 70%,          /* Disphotic deep */
+    #1565C0 75%,          /* Disphotic to aphotic transition */
+    #0D47A1 80%,          /* Aphotic start - deep blue */
+    #1976D2 82%,          /* Aphotic blue hint */
+    #0D47A1 85%,          /* Aphotic return */
+    #0A1F3A 90%,          /* Aphotic darker */
+    #071426 95%,          /* Almost black */
+    #0D1B2A 100%          /* Aphotic depths */
+  );
+  
+  /* Current zone variables (will be updated by JS) */
+  --current-primary: var(--surface-primary);
+  --current-secondary: var(--surface-secondary);
+  --current-accent: var(--surface-accent);
+  --current-text: var(--surface-text);
+  --current-bg: var(--surface-bg);
 }
 
 a {
@@ -28,10 +87,24 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  background: var(--ocean-gradient);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: var(--current-text);
+  transition: color 2s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Eliminate any default spacing */
+  box-sizing: border-box;
+}
+
+/* Ensure no gaps between elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {

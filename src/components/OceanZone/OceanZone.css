@@ -1,0 +1,134 @@
+.ocean-zone {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 0;
+  border: none;
+}
+
+.ocean-zone__content {
+  max-width: 1200px;
+  width: 100%;
+  z-index: 10;
+  position: relative;
+}
+
+/* Surface Zone Styles */
+.ocean-zone--surface {
+  background: radial-gradient(circle at center, rgba(179, 229, 252, 0.15) 0%, rgba(129, 212, 250, 0.08) 70%, transparent 100%);
+  color: var(--surface-text);
+}
+
+.ocean-zone--surface::before {
+  content: '';
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  right: 0;
+  bottom: -10vh;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255, 140, 0, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 30%, rgba(255, 140, 0, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 40% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 30%);
+  animation: surfaceRays 10s ease-in-out infinite;
+}
+
+@keyframes surfaceRays {
+  0%, 100% { opacity: 0.8; transform: translateY(0px); }
+  50% { opacity: 1; transform: translateY(-10px); }
+}
+
+/* Euphotic Zone Styles */
+.ocean-zone--euphotic {
+  background: radial-gradient(ellipse at center, rgba(38, 166, 154, 0.12) 0%, rgba(0, 105, 92, 0.06) 80%, transparent 100%);
+  color: var(--euphotic-text);
+}
+
+.ocean-zone--euphotic::before {
+  content: '';
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  right: 0;
+  bottom: -10vh;
+  background: 
+    linear-gradient(45deg, rgba(255, 167, 38, 0.1) 0%, transparent 50%),
+    linear-gradient(-45deg, rgba(46, 125, 50, 0.1) 0%, transparent 50%);
+  animation: euphoticFlow 15s ease-in-out infinite;
+}
+
+@keyframes euphoticFlow {
+  0%, 100% { transform: translateX(0px) scale(1); }
+  33% { transform: translateX(20px) scale(1.05); }
+  66% { transform: translateX(-15px) scale(0.95); }
+}
+
+/* Disphotic Zone Styles */
+.ocean-zone--disphotic {
+  background: radial-gradient(ellipse at center, rgba(57, 73, 171, 0.18) 0%, rgba(26, 35, 126, 0.1) 70%, transparent 100%);
+  color: var(--disphotic-text);
+}
+
+.ocean-zone--disphotic::before {
+  content: '';
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  right: 0;
+  bottom: -10vh;
+  background: 
+    radial-gradient(ellipse at 30% 40%, rgba(255, 183, 77, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 60%, rgba(63, 81, 181, 0.3) 0%, transparent 70%);
+  animation: disphoticMystery 20s ease-in-out infinite;
+}
+
+@keyframes disphoticMystery {
+  0%, 100% { opacity: 0.6; transform: scale(1) rotate(0deg); }
+  50% { opacity: 0.9; transform: scale(1.1) rotate(2deg); }
+}
+
+/* Aphotic Zone Styles */
+.ocean-zone--aphotic {
+  background: radial-gradient(ellipse at center, rgba(13, 71, 161, 0.25) 0%, rgba(13, 27, 42, 0.15) 60%, transparent 100%);
+  color: var(--aphotic-text);
+}
+
+.ocean-zone--aphotic::before {
+  content: '';
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  right: 0;
+  bottom: -10vh;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(0, 229, 255, 0.15) 0%, transparent 30%),
+    radial-gradient(circle at 75% 75%, rgba(100, 255, 218, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(0, 229, 255, 0.1) 0%, transparent 60%);
+  animation: aphoticGlow 8s ease-in-out infinite;
+}
+
+@keyframes aphoticGlow {
+  0%, 100% { 
+    opacity: 0.3; 
+    filter: blur(0px);
+  }
+  50% { 
+    opacity: 0.7; 
+    filter: blur(1px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ocean-zone {
+    padding: 1rem;
+  }
+  
+  .ocean-zone__content {
+    max-width: 100%;
+  }
+}
