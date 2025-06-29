@@ -51,6 +51,8 @@ const ParticleSystem = ({ zone, particleCount = 20 }) => {
       ref={containerRef} 
       className={`particle-system particle-system--${zone}`}
       aria-hidden="true"
+      role="presentation"
+      aria-label={`Decorative ${zone} zone particles`}
     />
   );
 };

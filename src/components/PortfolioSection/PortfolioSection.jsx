@@ -55,14 +55,14 @@ const PortfolioSection = () => {
 
   return (
     <div className="portfolio-section">
-      <div className="portfolio-section__header">
+      <header className="portfolio-section__header">
         <h2 className="portfolio-section__title">
           Our Portfolio
         </h2>
         <p className="portfolio-section__subtitle">
           Illuminating the Depths of Digital Innovation
         </p>
-      </div>
+      </header>
       
       <div className="portfolio-grid">
         {portfolioItems.map((item) => (

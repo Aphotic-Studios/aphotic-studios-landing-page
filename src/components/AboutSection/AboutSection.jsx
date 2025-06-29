@@ -4,14 +4,14 @@ import './AboutSection.css';
 const AboutSection = () => {
   return (
     <div className="about-section">
-      <div className="about-section__header">
+      <header className="about-section__header">
         <h1 className="about-section__title">
           Aphotic Studios
         </h1>
         <p className="about-section__subtitle">
           Diving Deep Into Digital Innovation
         </p>
-      </div>
+      </header>
       
       <div className="about-section__content">
         <div className="about-section__card">
@@ -28,23 +28,23 @@ const AboutSection = () => {
           </p>
         </div>
         
-        <div className="about-section__card">
+        <section className="about-section__card">
           <h2>Our Expertise</h2>
           <div className="about-section__expertise">
-            <div className="expertise-item">
+            <article className="expertise-item">
               <h3>Web Applications</h3>
               <p>Full-stack solutions that make waves</p>
-            </div>
-            <div className="expertise-item">
+            </article>
+            <article className="expertise-item">
               <h3>Mobile Development</h3>
               <p>Apps that dive deep into user experience</p>
-            </div>
-            <div className="expertise-item">
+            </article>
+            <article className="expertise-item">
               <h3>Digital Innovation</h3>
               <p>Exploring uncharted digital territories</p>
-            </div>
+            </article>
           </div>
-        </div>
+        </section>
       </div>
       
       <div className="about-section__cta">

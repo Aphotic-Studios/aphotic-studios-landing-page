@@ -56,3 +56,4 @@ After every response, provide a validation check with:
 ## Project Plans
 
 - [Ocean Theme Landing Page Plan](./memory-bank/ocean-theme-plan.md) - Detailed plan for building the dramatic ocean-themed landing page with zone transitions
+- [SEO Optimization Plan](./memory-bank/seo-optimization-plan.md) - Comprehensive SEO strategy including meta tags, favicon implementation, and technical SEO

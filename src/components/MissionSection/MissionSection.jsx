@@ -4,14 +4,14 @@ import './MissionSection.css';
 const MissionSection = () => {
   return (
     <div className="mission-section">
-      <div className="mission-section__header">
+      <header className="mission-section__header">
         <h2 className="mission-section__title">
           Our Mission
         </h2>
         <p className="mission-section__subtitle">
           Navigating the Twilight Zone of Technology
         </p>
-      </div>
+      </header>
       
       <div className="mission-section__content">
         <div className="mission-statement">
