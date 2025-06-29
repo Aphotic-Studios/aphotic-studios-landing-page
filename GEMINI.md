@@ -103,7 +103,6 @@ After every response, provide a validation check with:
 - **Spatial Hierarchy**: Generous padding, asymmetrical layouts, content prioritization
 
 ### 🚧 CURRENT STATE
-
 The website now has a **complete cascading design system** where:
 - All zones follow Apple spatial design principles
 - Glass effects progressively intensify with ocean depth
@@ -138,7 +137,6 @@ The website now has a **complete cascading design system** where:
 - **PWA features**: Service worker and offline capabilities
 
 ### 🎯 DESIGN SYSTEM PHILOSOPHY
-
 The current implementation follows **Apple's spatial design principles**:
 1. **Generous whitespace** using the comprehensive spacing system
 2. **Progressive disclosure** with primary/secondary/tertiary hierarchy

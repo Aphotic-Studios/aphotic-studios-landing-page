@@ -2,7 +2,7 @@
 .about-section {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 max(2rem, calc((100vw - 1440px) / 2));
+  padding: 0 2rem;
 }
 
 /* Hero Section - Apple's massive focal point */

@@ -68,9 +68,30 @@ const PortfolioSection = () => {
         </div>
       </header>
       
-      {/* Portfolio Grid - Apple card system */}
+      {/* Featured Project - Full Width */}
+      <div className="apple-content-grid--full">
+        <article className="apple-card apple-card--primary portfolio-card portfolio-card--primary">
+          <div className="portfolio-card__content">
+            <div className="portfolio-card__header">
+              <h2 className="apple-title--primary">{portfolioItems[0].title}</h2>
+              <span className={`portfolio-card__status status--${portfolioItems[0].status.toLowerCase().replace(' ', '-')}`}>
+                {portfolioItems[0].status}
+              </span>
+            </div>
+            <p className="portfolio-card__category">{portfolioItems[0].category}</p>
+            <p className="apple-text--large portfolio-card__description">{portfolioItems[0].description}</p>
+            <div className="portfolio-card__footer">
+              <button className="apple-button apple-button--secondary portfolio-card__button">
+                Explore Project
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+      {/* Portfolio Grid */}
       <div className="apple-content-grid--cards portfolio-grid">
-        {portfolioItems.map((item) => (
+        {portfolioItems.slice(1).map((item) => (
           <article key={item.id} className={`apple-card apple-card--secondary portfolio-card portfolio-card--${item.glow}`}>
             <div className="portfolio-card__content">
               <div className="portfolio-card__header">
