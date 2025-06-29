@@ -1,5 +1,6 @@
 import React from 'react';
 import './PortfolioSection.css';
+import '../shared/AppleComponents.css';
 
 const PortfolioSection = () => {
   const portfolioItems = [
@@ -54,46 +55,52 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <div className="portfolio-section">
-      <header className="portfolio-section__header">
-        <h2 className="portfolio-section__title">
-          Our Portfolio
-        </h2>
-        <p className="portfolio-section__subtitle">
-          Illuminating the Depths of Digital Innovation
-        </p>
+    <div className="apple-section">
+      {/* Hero Section - Apple massive typography */}
+      <header className="apple-hero">
+        <div className="apple-hero__content">
+          <h1 className="apple-hero__title">
+            Our Portfolio
+          </h1>
+          <p className="apple-hero__subtitle">
+            Illuminating the Depths of Digital Innovation
+          </p>
+        </div>
       </header>
       
-      <div className="portfolio-grid">
+      {/* Portfolio Grid - Apple card system */}
+      <div className="apple-content-grid--cards portfolio-grid">
         {portfolioItems.map((item) => (
-          <div key={item.id} className={`portfolio-card portfolio-card--${item.glow}`}>
-            <div className="portfolio-card__glow"></div>
+          <article key={item.id} className={`apple-card apple-card--secondary portfolio-card portfolio-card--${item.glow}`}>
             <div className="portfolio-card__content">
               <div className="portfolio-card__header">
-                <h3 className="portfolio-card__title">{item.title}</h3>
+                <h3 className="apple-title--tertiary">{item.title}</h3>
                 <span className={`portfolio-card__status status--${item.status.toLowerCase().replace(' ', '-')}`}>
                   {item.status}
                 </span>
               </div>
               <p className="portfolio-card__category">{item.category}</p>
-              <p className="portfolio-card__description">{item.description}</p>
+              <p className="apple-text--base portfolio-card__description">{item.description}</p>
               <div className="portfolio-card__footer">
-                <button className="portfolio-card__button">
+                <button className="apple-button apple-button--secondary portfolio-card__button">
                   Explore Project
                 </button>
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
       
-      <div className="portfolio-section__cta">
-        <h3>Ready to Create Something Extraordinary?</h3>
-        <p>Let&apos;s dive into the depths of your next project together.</p>
-        <button className="cta-button cta-button--aphotic">
-          Start Your Journey
-        </button>
-      </div>
+      {/* CTA Section - Apple minimal approach */}
+      <section className="apple-cta">
+        <div className="apple-cta__content">
+          <h2 className="apple-cta__title">Ready to Create Something Extraordinary?</h2>
+          <p className="apple-text--large">Let&apos;s dive into the depths of your next project together.</p>
+          <button className="apple-button apple-button--primary cta-button--aphotic">
+            Start Your Journey
+          </button>
+        </div>
+      </section>
     </div>
   );
 };

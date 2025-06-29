@@ -4,55 +4,69 @@ import './AboutSection.css';
 const AboutSection = () => {
   return (
     <div className="about-section">
-      <header className="about-section__header">
-        <h1 className="about-section__title">
-          Aphotic Studios
-        </h1>
-        <p className="about-section__subtitle">
-          Diving Deep Into Digital Innovation
-        </p>
-      </header>
-      
-      <div className="about-section__content">
-        <div className="about-section__card">
-          <h2>Who We Are</h2>
-          <p>
-            Welcome to the surface of our digital ocean. Aphotic Studios is a cutting-edge 
-            software development company that specializes in creating immersive digital 
-            experiences that go deeper than conventional solutions.
-          </p>
-          <p>
-            Like the ocean zones that inspire our name, we believe in exploring the depths 
-            of possibility, from the bright surface ideas to the mysterious depths where 
-            true innovation lives.
+      {/* Hero Section - Apple-style massive focus */}
+      <header className="hero">
+        <div className="hero__content">
+          <h1 className="hero__title">
+            Aphotic Studios
+          </h1>
+          <p className="hero__subtitle">
+            Diving deep into digital innovation
           </p>
         </div>
-        
-        <section className="about-section__card">
-          <h2>Our Expertise</h2>
-          <div className="about-section__expertise">
-            <article className="expertise-item">
-              <h3>Web Applications</h3>
-              <p>Full-stack solutions that make waves</p>
-            </article>
-            <article className="expertise-item">
-              <h3>Mobile Development</h3>
-              <p>Apps that dive deep into user experience</p>
-            </article>
-            <article className="expertise-item">
-              <h3>Digital Innovation</h3>
-              <p>Exploring uncharted digital territories</p>
-            </article>
+      </header>
+      
+      {/* Content Grid - Apple asymmetrical layout */}
+      <div className="content-grid">
+        {/* Primary Feature Card - Large, left-aligned */}
+        <article className="feature-card feature-card--primary">
+          <div className="feature-card__content">
+            <h2 className="feature-card__title">Who We Are</h2>
+            <p className="feature-card__description">
+              Aphotic Studios is a cutting-edge software development company that specializes 
+              in creating immersive digital experiences. We explore the depths of possibility, 
+              from bright surface ideas to the mysterious depths where true innovation lives.
+            </p>
           </div>
-        </section>
+        </article>
+        
+        {/* Secondary Cards - Smaller, purposeful */}
+        <div className="feature-cards-secondary">
+          <article className="feature-card feature-card--secondary">
+            <div className="feature-card__icon">🌊</div>
+            <h3 className="feature-card__title">Web Applications</h3>
+            <p className="feature-card__description">
+              Full-stack solutions that make waves
+            </p>
+          </article>
+          
+          <article className="feature-card feature-card--secondary">
+            <div className="feature-card__icon">📱</div>
+            <h3 className="feature-card__title">Mobile Development</h3>
+            <p className="feature-card__description">
+              Apps that dive deep into user experience
+            </p>
+          </article>
+          
+          <article className="feature-card feature-card--secondary">
+            <div className="feature-card__icon">🚀</div>
+            <h3 className="feature-card__title">Digital Innovation</h3>
+            <p className="feature-card__description">
+              Exploring uncharted digital territories
+            </p>
+          </article>
+        </div>
       </div>
       
-      <div className="about-section__cta">
-        <p>Ready to explore the depths of digital possibility?</p>
-        <button className="cta-button">
-          Dive Deeper
-        </button>
-      </div>
+      {/* CTA Section - Apple minimalist approach */}
+      <section className="cta-section">
+        <div className="cta-section__content">
+          <h2 className="cta-section__title">Ready to explore the depths?</h2>
+          <button className="cta-button">
+            Start Your Journey
+          </button>
+        </div>
+      </section>
     </div>
   );
 };
